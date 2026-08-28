@@ -2,6 +2,10 @@
 
 Flutter app: **<app name>**. Clean Architecture (`data → domain ← presentations`) with Riverpod state management.
 
+## Workflow — run this FIRST (any project/task)
+
+Before writing any code, follow the **superpowers** workflow (obra/superpowers): **brainstorming** → **using-git-worktrees** → **writing-plans** → build with **test-driven-development** → **requesting-code-review** → **verification-before-completion**. Do NOT jump straight into code.
+
 Read before working in this repo:
 
 - [`docs/architecture.md`](docs/architecture.md) — stack, folder layout, DI, state management, networking, error model. Read before adding a feature, touching cross-cutting code (`lib/core/`), or wiring anything into the app entry point.
