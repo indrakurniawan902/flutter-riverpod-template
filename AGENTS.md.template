@@ -1,0 +1,22 @@
+# AGENTS.md
+
+Flutter app: **<app name>**. Clean Architecture (`data → domain ← presentations`) with Riverpod state management.
+
+Read before working in this repo:
+
+- [`docs/architecture.md`](docs/architecture.md) — stack, folder layout, DI, state management, networking, error model. Read before adding a feature, touching cross-cutting code (`lib/core/`), or wiring anything into the app entry point.
+- [`docs/rules.md`](docs/rules.md) — naming conventions, layer rules, testing, and the definition-of-done checklist. Read before writing or reviewing any Dart code, and before implementing a Figma design (§13 covers Figma-MCP UI slicing).
+- [`docs/design.md`](docs/design.md) — visual design system: colors, typography, spacing, and component tokens. Read before styling any widget or implementing a Figma design, alongside `rules.md` §13.
+
+<!-- Delete this line once lib/ has real features: -->
+`lib/` is currently a fresh `flutter create` scaffold — the docs above describe the target shape to build toward, not existing code.
+
+## Commands
+
+```bash
+flutter analyze                                          # must be clean before finishing any change
+dart run build_runner build --delete-conflicting-outputs # after touching freezed/json_serializable/@riverpod classes
+flutter gen-l10n                                          # if only ARB files changed
+flutter test
+flutter run
+```
